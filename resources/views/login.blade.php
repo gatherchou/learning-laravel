@@ -16,8 +16,8 @@
 	<div class="container">
 		<h1><?php echo $title; ?></h1>
 		<form method="post">
-			ユーザ名　：<input type="text" name="name"/><br /><br />
-			パスワード：<input type="password" name="password"/><br /><br />
+			用户名：<input type="text" name="name"/><br /><br />
+			密　码：<input type="password" name="passwd"/><br /><br />
 					<input type="submit" value="login">
 		</form>	
 	</div>

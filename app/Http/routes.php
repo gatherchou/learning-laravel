@@ -16,33 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('login', function (){
-	return view('login', ['title' => 'login']);
+	return view('login', 'UserController@get_login');
 });
 
-Route::get('reg', function (){
-	return view('reg', ['title' => 'sign up']);
-});
+Route::post('login', 'UserController@post_login');
 
-Route::post('reg', 'UserController@signUp');
-// Route::get('/test', ['as' => 'test.route', function (){
-// 	return 'this is a test';
-// }]);
+Route::get('reg', 'UserController@get_signup');
 
-// Route::get('/test-link', function (){
-// 	return route('test.route');
-// });
+Route::post('reg', 'UserController@post_signUp');
 
-// Route::get('user/{name?}', function ($name = 'John') {
-//     return $name;
-// });
-
-// Route::get('test', function(){
-// 	return view('test', ['name' => 'akira']);
-// });
-
-// Route::get('user/{id}', 'UserController@showId');
-
-// Route::get('test/{name?}', 'UserController@sayHello');
 
 
 /*
